@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>广州大学生创业研究院</title>
+    <load type="css" href="__PUBLIC__/Styles/bootstrap.css" />
+    <load type="css" href="__PUBLIC__/Styles/main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      
+      <div class="banner">
+        <img src="__PUBLIC__/Resources/banner.jpg" alt="banner">
+      </div>
+
+      <div class="navigation">
+        <ul>
+          <li><a href="__APP__">首页</a></li>
+          <li>
+            <a href="__APP__/Articles/read_category?c=jieshao/jianjie">研究院介绍</a>
+            <ul class="menu">
+              <li><a href="__APP__/Articles/read_category?c=jieshao/jianjie">研究院简介</a></li>
+              <li><a href="__APP__/Articles/read_category?c=jieshao/bumen">下属部门简介</a></li>
+            </ul> 
+            <div class="clear"></div>
+          </li>
+          <li>
+            <a href="__APP__/Articles/read_category?c=cydt/xwzx">创业动态</a>
+            <ul class="menu">
+              <li><a href="__APP__/Articles/read_category?c=cydt/xwzx">新闻资讯</a></li>
+              <li><a href="__APP__/Articles/read_category?c=cydt/zcgg">政策公告</a></li>
+            </ul> 
+            <div class="clear"></div>
+          </li>
+          <li>
+            <a href="__APP__/Articles/read_category?c=cykt/jingyan">创业课堂</a>
+            <ul class="menu">
+              <li><a href="__APP__/Articles/read_category?c=cykt/jingyan">经验之谈</a></li>
+              <li><a href="__APP__/Articles/read_category?c=cykt/renwu">创业典型</a></li>
+              <li><a href="__APP__/Articles/read_category?c=cykt/xiezuo">写作指导</a></li>
+              <li><a href="__APP__/Articles/read_category?c=cykt/pxxm">培训项目</a></li>
+            </ul> 
+            <div class="clear"></div>
+          </li>
+          <li>
+            <a href="__APP__/Articles/read_category?c=cyyj/cyal">创业研究</a>
+            <ul class="menu">
+              <li><a href="__APP__/Articles/read_category?c=cyyj/cyal">创业案例</a></li>
+              <li><a href="__APP__/Articles/read_category?c=cyyj/xslw">学术论文</a></li>
+              <li><a href="__APP__/Articles/read_category?c=cyyj/yjkt">研究课题</a></li>
+            </ul>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <a href="__APP__/Articles/read_category?c=daoshi/kcjs">创业导师</a>
+            <ul class="menu">
+              <li><a href="__APP__/Articles/read_category?c=daoshi/kcjs">培训课程讲师</a></li>
+              <li><a href="__APP__/Articles/read_category?c=daoshi/xnds">校内创业导师</a></li>
+              <li><a href="__APP__/Articles/read_category?c=daoshi/xwds">校外创业导师</a></li>
+            </ul> 
+            <div class="clear"></div>
+          </li>
+          <li>
+            <a href="__APP__/Articles/read_category?c=cyjd/yuanqu">创业基地</a>
+            <ul class="menu">
+              <li><a href="__APP__/Articles/read_category?c=cyjd/yuanqu">园区简介</a></li>
+              <li><a href="__APP__/Articles/read_category?c=cyjd/tzjg">投资机构</a></li>
+            </ul> 
+            <div class="clear"></div>
+          </li>
+          <li>
+            <a href="__APP__/Articles/association?c=xszz/cyxh/jianjie">学生组织</a> 
+            <div class="clear"></div>
+          </li>
+          <li><a href="__APP__/Articles/read_category?c=xmzs">项目展示</a></li>
+          <li><a href="__APP__/Download/index">下载专区</a></li>
+          <li><a href="__APP__/Articles/read_category?c=service">服务部分</a></li>
+        </ul>
+      </div>
+
+      <!-- subpage content -->
+        <!-- left block -->
+        <div class="leftSub span3">
+          <div class="mulu">
+            <ul class="nav">
+              <li class="mulu_title"><a><{$currentDirectoryName}></a></li>
+              <volist name="categoryList" id="it">
+                <li><a href=<{$it.url}>><i class="icon-chevron-right"></i><{$it.name}></a></li>
+              </volist>
+            </ul>
+          </div>
+          <div class="shortcuts span3">
+            <img class="kjtd_header" alt="快捷通道" src="__PUBLIC__/Resources/kjtd.jpg">
+            <div class="shortcut">
+              <a href="#"><img src="__PUBLIC__/Resources/button1.jpg" alt="application"></a>
+            </div>
+            <div class="shortcut">
+              <a href="#"><img src="__PUBLIC__/Resources/button2.jpg" alt="application"></a>
+            </div>
+            <div class="shortcut">
+              <a href="#"><img src="__PUBLIC__/Resources/button3.jpg" alt="application"></a>
+            </div>
+            <div class="shortcut">
+              <a href="#"><img src="__PUBLIC__/Resources/button4.jpg" alt="download"></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- right block -->
+        <div class="rightSub span9">
+          <div class="header well well-small">当前位置：<{$currentPathStr}></div>
+
+          <if condition="$type eq 1">
+            <div class="passage">
+              <h2><{$article.title}></h2>
+              <div class="passageMessage">
+                <span class="passageTime">发布时间：<{$article.date}></span>
+                <span class="passageSource">来源：<{$article.source}></span>
+              </div>
+              <div class="passageContent">
+                <{$article.content}>
+              </div>
+            </div>
+
+          <elseif condition="$type eq 2" />
+            <ul class="subList">
+            <volist name="list" id="it">
+              <li>
+                <a href="<{$it.url}>"><{$it.title}></a><span><{$it.date}></span>
+              </li>
+            </volist>
+            </ul>
+
+            <div class="yema pull-right">
+              当前第<span id="yemaNow">1</span>/<span id="yemaTotal">26</span>页
+              <div class="btn-group">
+                <button class="btn"><a href="#" id="forward" style="color:#333;">上一页</a></button>
+                <button class="btn"><a href="#" id="back" style="color:#333;">下一页</a></button>
+              </div>
+              转到第 <input style="width:30px;margin-top:10px;" type="text" id="yemaNumber"> 页
+              <input class="btn" style="font-size:12px" type="submit" value="转到">
+            </div>
+          </if>
+        </div>
+      </div>
+
+    <!-- displaying the contact information -->
+  <div id="contactInfo">
+  <p>广州大学生创业研究院 版权所有 05008855号</p>
+  <p>地址： 广东省广州市番禺区大学城外环西路230号 邮政编码:510006 
+  电话：（020) 39366998 传真：（020）39366998</p>
+  <p>广州大学生创业研究院网站:www.cyyjy.gzhu.edu.cn</p>
+  </div>
+
+  </body>
+</html>
+
+<load type="js" href="__PUBLIC__/Scripts/jquery-1-11-0-min.js" />
+<load type="js" href="__PUBLIC__/Scripts/home-articles.js" />

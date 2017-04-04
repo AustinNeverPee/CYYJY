@@ -1,0 +1,291 @@
+/* 主页面 */
+/* 全局设置 */
+body {
+  font-style: normal;
+  font-family: "微软雅黑","宋体";
+  background-image: url("../resources/pageBackground.png");
+}
+/* 全局设置 部分结束 */
+
+/* 外层容器 */
+#content {
+  width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Banner 部分 */
+.banner {
+  height: 190px;
+}
+
+.banner img {
+  height: 190px;
+  width: 1000px;
+}
+/* Banner 部分结束 */
+
+/* 左侧目录列表 */
+.leftList {
+  width: 200px;
+  margin-top: 10px;
+  border: 1px solid black;
+  float: left;
+}
+
+.leftList ul { 
+  list-style: none; 
+  margin-left: -30px;
+} 
+
+#nav li，#nav li ul, #nav li ul li{
+  list-style: none;
+} 
+
+#nav li span { 
+  width: 150px; 
+  height: 30px; 
+  line-height: 30px; 
+  background: #C2C2A3; 
+  display: block; 
+  text-indent: 10px;
+  margin-top: 5px;
+} 
+
+#nav a {
+  margin-left: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+#nav a:visited {
+  color: blue;
+}
+
+#nav a:hover {
+  color: red;
+  text-decoration: none;
+}
+/*
+#nav li ul li span { 
+  background: #DADAC8;
+} 
+
+#nav li ul li ul li span { 
+  background: #E5E5D8;
+}
+
+#nav li ul li ul li ul li span { 
+  background: #fffff2;
+}
+/* 左侧目录列表 部分结束 */ 
+
+/* 右侧内容 */
+.rightContent {
+  width: 750px;
+  border: 1px solid black;
+  margin: 10px 10px 30px 30px;
+  float: right;
+}
+
+.blockNow {
+  font-size: 18px;
+  margin-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.operator {
+  float: right;
+  margin-top: -30px;
+  margin-right: 30px;
+}
+
+.line {
+  width: 700px;
+  margin-left: 25px;
+  margin-right: 25px;
+  height: 5px;
+  background-color: #2D2D2B;
+
+}
+
+/* 文本输入框 */
+#ckeditor {
+  width: 700px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+/* 添加文章 */
+#contentForm {
+  margin-left: 30px;
+  margin-top: 20px;
+  height: 630px;
+}
+
+.item1 {
+  width: 630px;
+  height: 40px;
+}
+
+.item2 {
+  width: 660px;
+  height: 350px;
+}
+
+.item3 {
+  width: 100px;
+  height: 40px;
+  float: right;
+  margin-right: 35px;
+}
+
+.item4 {
+  width: 100px;
+  height: 40px;
+  float: right;
+  margin-right: 70px;
+}
+
+.item5 {
+  float: right;
+  margin-right: 50px;
+}
+
+.item1 div {
+  float: left;
+}
+
+textarea {
+  float: left;
+}
+
+#source {
+  margin-left: 25px;
+}
+
+#author {
+  margin-left: 25px;
+}
+
+#editor {
+  margin-left: 9px;
+}
+
+#date {
+  margin-left: 25px;
+}
+
+#title {
+  margin-left: 25px;
+}
+
+#category {
+  margin-left: 25px;
+}
+
+.item3 div {
+  float: right;
+  margin-right: 3px;
+}
+
+.item4 div {
+  float: right;
+}
+
+.item3 input {
+  float: right;
+}
+
+.item4 select {
+  float: right;
+  margin-right: -90px;
+}
+/* 添加文章 部分结束 */
+
+/* 删除文章 */
+#idForm {
+  margin-left: 30px;
+  margin-top: 50px;
+  height: 50px;
+}
+
+#id {
+  margin-left: 25px;
+}
+
+#btn2 {
+  margin-top: -50px;
+}
+/* 删除文章 部分结束 */
+/* 文本输入框 部分结束 */
+
+/* 右侧主要内容 */
+.mainContent {
+  width: 700px;
+  margin: 20px 25px 20px 25px;
+}
+/* 右侧主要内容 部分结束 */
+
+/* 页码 */
+.yema {
+  float: right;
+  margin-right: 25px;
+  margin-bottom: 20px; 
+}
+/* 页码 部分结束*/
+/* 右侧内容 部分结束 */
+/* 外层容器 部分结束 */
+
+/* 全局新闻列表块设定 */
+/* 块名部分 */
+.header {
+  padding: 5px 5px 5px 5px;
+  height: 20px;
+  font: 17px/18px "微软雅黑","黑体";
+  color: #FFFFFF;
+  background-image: url("../resources/modelButtonBackground1.jpg");
+}
+
+.iconMore {
+  float: right;
+}
+/* 块名部分 部分结束 */
+
+/* 联系方式 */
+#contactInfo {
+  width: 1000px;
+  padding: 25px 15px 25px 10px;
+  text-align: center;
+  font-size: 80%;
+  color: gray;
+  margin: 0 auto;
+}
+/* 联系方式 部分结束 */
+
+/* 新闻列表 */
+.news li {
+  list-style-type: square;
+  display: list-item;
+  width: 350px;
+  font-size: 16px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  float: left;
+}
+
+.news li a:link, a:visited {
+  color: #666;
+  text-decoration: none;
+}
+
+.news li a:hover {
+  color: #ff0000;
+  text-decoration: none;
+}
+/* 新闻列表 部分结束 */
+/* 全局新闻列表块设定 部分结束 */
